@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HomeWorkDependencyInjection</string>
+    <string name="just_example">Just example</string>
 </resources>
