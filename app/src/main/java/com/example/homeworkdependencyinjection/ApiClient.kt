@@ -9,6 +9,5 @@ class ApiClient @Inject constructor() {
     val client = Retrofit.Builder()
         .baseUrl("https://akabab.github.io/")
         .addConverterFactory(GsonConverterFactory.create())
-        .client(OkHttpClient())
         .build()
 }

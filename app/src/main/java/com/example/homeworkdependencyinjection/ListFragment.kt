@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.homeworkdependencyinjection.databinding.ListFragmentLayoutBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ListFragment : Fragment(), SuperheroRecyclerViewAdapter.OnItemClickListener{
     private lateinit var binding: ListFragmentLayoutBinding
     private var onItemClick:(item: DataClasses.Superheroes) -> Unit = {}
