@@ -3,8 +3,10 @@ package com.example.homeworkdependencyinjection
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.homeworkdependencyinjection.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlin.concurrent.thread
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 

@@ -4,11 +4,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class SuperheroViewModel:ViewModel() {
-    private val repo = SuperheroRepository()
+@HiltViewModel
+class SuperheroViewModel @Inject constructor(val repo:SuperheroRepository):ViewModel() {
     private val _uiState =MutableLiveData<UiState>(UiState.EmptyList)
     val uiState:LiveData<UiState> = _uiState
 
